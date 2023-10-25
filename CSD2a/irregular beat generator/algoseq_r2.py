@@ -42,17 +42,17 @@ def generate_rhythm(bpm, length_in_16ths):
 def predefined_samples(bpm, length_in_16ths):
     samples = [
         {
-            'file_path': "/home/begligow/samples/[KB6]_Acetone_Rhythm-Ace/CLAVE.WAV",
+            'file_path': "./samples/CLAVE.WAV",
             'event_times': generate_rhythm(bpm, length_in_16ths),
             'repetitions': 1
         },
         {
-            'file_path': "/home/begligow/samples/[KB6]_Acetone_Rhythm-Ace/HHCL.WAV",
+            'file_path': "./samples/HHCL.WAV",
             'event_times': generate_rhythm(bpm, length_in_16ths),
             'repetitions': 1
         },
         {
-            'file_path': "/home/begligow/samples/[KB6]_Acetone_Rhythm-Ace/KICK1.WAV",
+            'file_path': "./samples/KICK1.WAV",
             'event_times': generate_rhythm(bpm, length_in_16ths),
             'repetitions': 1
         },
@@ -79,8 +79,8 @@ def ask_bpm_and_repetition():
             bpm = float(bpm_input)
 
         repetitions = int(input("Enter the number of times to repeat this sequence: "))
-        if repetitions <= 0:
-            print("Enter a positive number of repetitions.")
+        # if repetitions <= 0:
+        #     print("Enter a positive number of repetitions.")
         
         return bpm, repetitions  # Return all the values as a tuple
     except ValueError:
@@ -99,7 +99,7 @@ def play_sample(sample_info):
 
         cmd = [
             'python3',
-            'poly_exp_r1.py',
+            'algoseqsub.py',
             sample_info['file_path'],
             # argument for giving file path
             ','.join(map(str, sample_info['event_times'])),

@@ -49,7 +49,7 @@ if __name__ == "__main__":
         sys.exit(1)
 
     file_path = sys.argv[1]
-    event_times = sys.argv[2]
+    event_times = [float(et) for et in sys.argv[2].split(',')]
     bpm = float(sys.argv[3])
     repetitions = int(sys.argv[4])  
     #repetitions as an integer equals to the turns on the playback forLoop
