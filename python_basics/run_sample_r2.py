@@ -1,61 +1,70 @@
 import simpleaudio as sa
 import time
 
-def afspelen(audiobestand, lengtes, bpm):
+def afspelen(Audiofile, lengths, bpm):
     try:
-        # Laad het audiobestand
-        wave_obj = sa.WaveObject.from_wave_file(audiobestand)
+        # Laad het Audiofile
+        wave_obj = sa.WaveObject.from_wave_file(Audiofile)
 
-        if len(lengtes) == 0:
-            print("Fout: Geen lengtes opgegeven voor de samples.")
+        if len(lengths) == 0:
+            print("Fout: no lengths submitted for the samples.")
             return
 
-        for lengte in lengtes:
-            if lengte <= 0:
-                print(f"Fout: Ongeldige lengte opgegeven: {lengte}")
+        for length in lengths:
+            if length <= 0:
+                print(f"Fout: unsufficient lengths given: {length}")
                 continue
 
             # Bereken de tijd in seconden op basis van de BPM en de verhouding
-            tijd_in_seconden = (60 / bpm) * lengte
+            time_in_seconds = (60 / bpm) * length
 
-            # Speel het audiobestand af voor de berekende tijd
+            # Speel het Audiofile af voor de berekende tijd
             play_obj = wave_obj.play()
             play_obj.wait_done()
 
             # Wacht tot de duur van de noot en de vertraging voor de volgende sample
-            time.sleep(tijd_in_seconden)
+            time.sleep(time_in_seconds)
 
     except FileNotFoundError:
-        print(f"Fout: Audiobestand '{audiobestand}' kon niet worden gevonden.")
+        print(f"Fout: Audiofile '{Audiofile}' kon niet worden gevonden.")
     except Exception as e:
-        print(f"Fout bij het afspelen van het audiobestand: {e}")
+        print(f"Fout bij het afspelen van het Audiofile: {e}")
 
-def vraag_lengtes_bpm(aantal_keer):
-    lengtes = []
-    bpm = float(input("Geef het BPM (Beats Per Minute): "))
-    for i in range(aantal_keer):
+def ask_length_and_bpm(amount_times):
+    lengths = [] # list of given lengths
+    bpm = float(input("Geef het BPM (Beats Per Minute): ")) # Asks for bpm
+    
+
+    for i in range(amount_times):
         while True:
             try:
-                lengte = float(input(f"Geef de lengte voor sample {i + 1} (kwartnoten): "))
-                if lengte <= 0:
-                    print("Voer een positieve lengte in.")
+                length = float(input(f"Geef de length voor sample {i + 1} (kwartnoten): "))
+                if length <= 0:
+                    print("Voer een positieve length in.")
                     continue
-                lengtes.append(lengte)
+
+                lengths.append(length)  #   Puts given length in list lengths, the question follows up through the amount given at amount_times
+                
                 break
-            except ValueError:
-                print("Ongeldige invoer. Voer een positieve lengte in.")
-    return lengtes, bpm
+            except ValueError: print("Ongeldige invoer. Voer een positieve length in.")
+    
+    return lengths, bpm
 
 def main():
     try:
-        audiobestand = input("Geef het pad naar het audiobestand (bijv. sample.wav): ")
+       
+        Audiofile = input("Geef het pad naar het Audiofile (bijv. sample.wav): ")
+        amount_times = int(input("How many times would you like to play the sample?"))
+        lengths, bpm = ask_length_and_bpm(amount_times)
+
         
-        aantal_keer = int(input("Hoe vaak wil je de sample afspelen? "))
-        lengtes, bpm = vraag_lengtes_bpm(aantal_keer)
         
-        afspelen(audiobestand, lengtes, bpm)
+        afspelen(Audiofile, lengths, bpm)
+
+
     except KeyboardInterrupt:
-        print("\nProgramma gestopt. (Ctrl+C)")
+        print("\nProgram stopped. (Ctrl+C)")
+
 
 if __name__ == "__main__":
     main()
