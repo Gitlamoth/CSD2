@@ -1,0 +1,67 @@
+import cv2
+import numpy as np
+
+# Initialize the webcam
+cap = cv2.VideoCapture(0)
+
+# Define the scaling factor (2x)
+scale_factor = 2
+
+while True:
+    # Capture a key press event
+    key = cv2.waitKey(1) & 0xFF
+
+    # Exit the loop if 'q' is pressed
+    if key == ord('q'):
+        break
+
+    ret, webcam_frame = cap.read()
+
+    # Resize the frame to increase resolution
+    webcam_frame = cv2.resize(webcam_frame, None, fx=scale_factor, fy=scale_factor)
+
+    # Convert the frame to grayscale
+    gray = cv2.cvtColor(webcam_frame, cv2.COLOR_BGR2GRAY)
+
+    # Use Gaussian blur to reduce noise and improve precision
+    blurred = cv2.GaussianBlur(gray, (9, 9), 2)
+
+    # Use the Hough Circle Transform to detect circular shapes
+    circles = cv2.HoughCircles(
+        blurred,
+        cv2.HOUGH_GRADIENT,
+        dp=1,
+        minDist=50,
+        param1=200,  # Increased param1 for high precision
+        param2=20,   # Decreased param2 for high precision
+        minRadius=10,
+        maxRadius=100,
+    )
+
+    if circles is not None:
+        circles = np.uint16(np.around(circles))
+
+        # Initialize variables for the best circle
+        best_circle = None
+        best_circle_score = 0
+
+        for circle in circles[0, :]:
+            # Calculate a score for the circle (e.g., you can use the radius)
+            circle_score = circle[2]
+
+            # Update the best circle if the current circle has a higher score
+            if circle_score > best_circle_score:
+                best_circle_score = circle_score
+                best_circle = circle
+
+        if best_circle is not None:
+            # Draw the best circle
+            cv2.circle(webcam_frame, (best_circle[0], best_circle[1]), best_circle[2], (0, 255, 0), 2)
+            cv2.circle(webcam_frame, (best_circle[0], best_circle[1]), 2, (0, 0, 255), 3)
+
+    # Display the result
+    cv2.imshow('Best Circular Object Detection', webcam_frame)
+
+# Release the webcam and close all windows
+cap.release()
+cv2.destroyAllWindows()

@@ -1,0 +1,45 @@
+import cv2
+import numpy as np
+
+# Function to perform circular object detection on an image
+def detect_circles_in_image(image_path):
+    # Load the image
+    image = cv2.imread(image_path)
+
+    # Convert the image to grayscale
+    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+
+    # Use Gaussian blur to reduce noise and improve precision
+    blurred = cv2.GaussianBlur(gray, (9, 9), 2)
+
+    # Use the Hough Circle Transform to detect circular shapes
+    circles = cv2.HoughCircles(
+        blurred,
+        cv2.HOUGH_GRADIENT,
+        dp=1,
+        minDist=50,
+        param1=200,  # Increased param1 for high precision
+        param2=20,   # Decreased param2 for high precision
+        minRadius=10,
+        maxRadius=100,
+    )
+
+    if circles is not None:
+        circles = np.uint16(np.around(circles))
+        for circle in circles[0, :]:
+            # Draw the detected circles on the image
+            cv2.circle(image, (circle[0], circle[1]), circle[2], (0, 255, 0), 2)
+            cv2.circle(image, (circle[0], circle[1]), 2, (0, 0, 255), 3)
+
+        # Save the result with detected circles
+        cv2.imwrite("result_with_circles.jpg", image)
+        print("Circular object detection complete. Result saved as 'result_with_circles.jpg'.")
+
+    else:
+        print("No circles detected in the image.")
+
+# Input the file path to the image you want to process
+image_path = input("Enter the file path to the image: ")
+
+# Perform circular object detection on the specified image
+detect_circles_in_image(image_path)

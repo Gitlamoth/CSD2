@@ -1,0 +1,41 @@
+[33mcommit 4be36e03590e50aa2741b86d6863dac8881de3c0[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Bram <bram.laman@outlook.com>
+Date:   Fri Oct 6 15:42:24 2023 +0200
+
+    clone van wndws naar linux, en python_basics toegevoegd en nu vervolgens gepushed naar CSD2.git
+
+[33mcommit ac595718032375a8ce66c31450dc45c0acfec33a[m
+Author: bram laman <bram.laman@outlook.com>
+Date:   Fri Sep 22 16:24:09 2023 +0200
+
+    interactief gemaakt met vragen van naam
+
+[33mcommit 7f8b195b02b3c42bcae064c7b7015881c1597fdc[m
+Author: bram laman <bram.laman@outlook.com>
+Date:   Fri Sep 22 16:14:39 2023 +0200
+
+    printed hello world
+
+[33mcommit ab6bce8eef50fc1bfce70029c08306978e9a6b6f[m
+Author: bram laman <bram.laman@outlook.com>
+Date:   Sun Sep 17 20:31:44 2023 +0200
+
+    helloworld.py
+
+[33mcommit abcde2bc5a1f456ef40ab8887cf1b5f05d968516[m
+Author: bram laman <bram.laman@outlook.com>
+Date:   Tue Sep 12 13:23:11 2023 +0200
+
+    there added
+
+[33mcommit f239adaef7f27ed8eb4fb194c413bc1958ee44ab[m
+Author: bram laman <bram.laman@outlook.com>
+Date:   Fri Sep 8 15:53:28 2023 +0200
+
+    changed hello.txt
+
+[33mcommit 10c7f35e00d3463114cc20351efd1b0ba1b1674c[m
+Author: bram laman <bram.laman@outlook.com>
+Date:   Fri Sep 8 14:51:03 2023 +0200
+
+    paardenstal

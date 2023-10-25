@@ -1,0 +1,63 @@
+
+
+
+
+In this folder are the deliverables for the irregular beat generator assignment of MT CSD2a
+
+the 'algoseqsub' script is a subprocess that's there for multiple sample playback, it's called from the mainscript 'algoseq'
+
+
+
+
+here is my elaboration on this part assignment:
+
+
+
+
+strategie;
+    een script die een structuur bouwt met een ritmische logica
+
+Reflectie;
+
+    constant hoofd om de functionaliteit van de code willen krijgen, 
+    om vervolgens zo dicht mogelijk  bij  de wensen te komen.
+
+    Ik had eerder terug naar de fundamenten moeten treden om vervolgens eerder aan een efficiënte lijst generator te komen
+
+
+
+7 uur aan gewerkt 
+___________________________________________________________________
+-------------------------------------------------------------------
+
+functie;
+
+
+        for i in range(length_in_16ths):
+                    
+            hit_probability = random.uniform(0, 1)
+                       
+                        if hit_probability > 0.50:
+                            rhythm.append(4)  
+                            rhythm[i] +=1
+
+                        elif hit_probability > 0.75:
+                            rhythm.append(2)
+                            rhythm[i] -=1
+                        else:
+	                    ....
+
+
+        def predefined_samples(bpm, length_in_16ths):
+            samples = [
+                {
+                    'file_path': "/home/begligow/samples/[KB6]_Acetone_Rhythm-Ace/CLAVE.WAV",
+                    'event_times': generate_rhythm(bpm, length_in_16ths),
+                    'repetitions': 1
+                },
+
+
+
+
+
+
