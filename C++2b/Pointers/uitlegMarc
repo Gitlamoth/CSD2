@@ -1,0 +1,15 @@
+#include <iostream>
+
+
+int main()
+{
+char letter = a;
+std::cout<< letter << std::endl;
+
+char* letterpointer = &letter;
+std::cout<< (long)letterpointer << std::endl;
+std::cout<< *letterpointer << std::endl;
+
+
+
+}

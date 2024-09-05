@@ -9,6 +9,7 @@ public:
     float Hertz;
 
 
+//            CONSTRUCTOR
     Instrument(float string, float body);
 
     void radiation();
