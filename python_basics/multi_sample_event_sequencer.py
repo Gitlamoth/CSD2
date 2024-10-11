@@ -1,3 +1,9 @@
+import simpleaudio as sa
+import time
+
+# load sample
+soundFile = sa.WaveObject.from_wave_file("./hat.wav")
+
 bpm = 100
 
 # Input for BPM
@@ -69,17 +75,18 @@ print("sixteenthnotedur:", sixteenthnotedur)
 def multiply_by_16th(events, sixteenthnotedur):
     return [event * sixteenthnotedur for event in events]
 
-# Generate timestamps for events
+# Generate timestamps and durations for events
 events1 = multiply_by_16th(events1, sixteenthnotedur)
 events2 = multiply_by_16th(events2, sixteenthnotedur)
 
 # Assign timestamps to each instrument's notes
 for note, timestamp in zip(initial_instrument_1_notes, events1):
     note['timestamp'] = timestamp
+    note['duration'] = timestamp  # For now, we're setting the duration same as timestamp (you can change this logic)
 
 for note, timestamp in zip(initial_instrument_2_notes, events2):
     note['timestamp'] = timestamp
-
+    note['duration'] = timestamp
 
 # Combine the notes into one list for playback
 combined_notes = initial_instrument_1_notes + initial_instrument_2_notes
@@ -93,4 +100,24 @@ sort_notes_by_timestamp(combined_notes)
 
 # Read and print out all timestamps from the dictionaries in combined_notes
 for note in combined_notes:
-    print(f"Instrument: {note['instrument']}, Sample: {note['sample_location']}, Timestamp: {note['timestamp']} seconds")
+    print(f"Instrument: {note['instrument']}, Sample: {note['sample_location']}, Timestamp: {note['timestamp']} seconds, Duration: {note['duration']} seconds")
+
+
+# Store the start time
+time_zero = time.time()
+
+# iterate through time sequence and play sample
+while combined_notes:
+    now = time.time() - time_zero
+    ts = combined_notes[0]['timestamp']  # Check the timestamp of the next event
+    duration = combined_notes[0]['duration']  # Get the duration of the note
+
+    # check if we passed the next timestamp,
+    # if so, play sample and fetch new timestamp
+    if now >= ts:
+        play_obj = soundFile.play()  # Play the sound asynchronously
+        time.sleep(duration)  # Sleep for the duration of the note to simulate length
+        play_obj.wait_done()  # Wait for the sound to finish before proceeding
+        combined_notes.pop(0)  # Only pop after playing the sound and its duration
+
+    time.sleep(0.001)  # Sleep to avoid busy waiting

@@ -2,14 +2,20 @@
 
 bpm = 100
 
+# Initialize lists
+events1 = []
+events2 = []
 
-amountofevents = int(input("how many events? "))
-events = []
-
-for i in range(int(amountofevents)):
-    events.append(float(input(f"Enter event duration in sixteenths \nsixteenth {i+1}:")))
+# Function to prepare events, with dynamic input prompt
+def prepareEvents(events, list_name):
+    amountofevents = int(input(f"How many events for {list_name}?  "))
     
-
+    for i in range(int(amountofevents)):
+        events.append(float(input(f"Enter event duration in sixteenths \nFor {list_name}, sixteenth {i+1}:")))
+    
+# Call the function for each list with a dynamic name
+prepareEvents(events1, "List 1")
+prepareEvents(events2, "List 2")
 
 """
 while True:
@@ -45,13 +51,18 @@ while True:
 sixteenthnotedur = 60 / (bpm*4)
 print("sixteenthnotedur:", sixteenthnotedur)
 
-events_to_sixteenth = []
+
 
 #Turn event duration into corresponding value of sixteenth
 def multiply_by_16th(events, sixteenthnotedur):
-    
-    return [event * sixteenthnotedur for event in events]
+    for i in range(len(events)):
+        events[i] = events[i] * sixteenthnotedur 
+    #return [event * sixteenthnotedur for event in events]
 
-events = multiply_by_16th(events, sixteenthnotedur)
-print("new list of events, sixteenths in ms", events)
 
+multiply_by_16th(events1, sixteenthnotedur)
+multiply_by_16th(events2, sixteenthnotedur)
+print("new list of events1, sixteenths in ms", events1)
+print("new list of events2, sixteenths in ms", events2)
+
+#[{'kick':soundFile, 'ts':200},{snare, 300}, kick]
