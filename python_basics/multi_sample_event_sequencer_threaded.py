@@ -1,7 +1,8 @@
 import simpleaudio as sa
 import time
+import threading
 
-# load sample
+# Load sample
 soundFile = sa.WaveObject.from_wave_file("./hat.wav")
 
 bpm = 100
@@ -45,12 +46,10 @@ def prepareEvents(events, list_name):
 # Define initial instrument notes
 initial_instrument_1_notes = [
     {'instrument': 'Instrument_1', 'sample_location': './hat.wav'},
-  
 ]
 
 initial_instrument_2_notes = [
     {'instrument': 'Instrument_2', 'sample_location': './hat.wav'},
- 
 ]
 
 # Prepare events for both instruments
@@ -75,18 +74,16 @@ print("sixteenthnotedur:", sixteenthnotedur)
 def multiply_by_16th(events, sixteenthnotedur):
     return [event * sixteenthnotedur for event in events]
 
-# Generate timestamps and durations for events
+# Generate timestamps for events
 events1 = multiply_by_16th(events1, sixteenthnotedur)
 events2 = multiply_by_16th(events2, sixteenthnotedur)
 
 # Assign timestamps to each instrument's notes
 for note, timestamp in zip(initial_instrument_1_notes, events1):
     note['timestamp'] = timestamp
-    note['duration'] = timestamp  # For now, we're setting the duration same as timestamp (you can change this logic)
 
 for note, timestamp in zip(initial_instrument_2_notes, events2):
     note['timestamp'] = timestamp
-    note['duration'] = timestamp
 
 # Combine the notes into one list for playback
 combined_notes = initial_instrument_1_notes + initial_instrument_2_notes
@@ -100,24 +97,38 @@ sort_notes_by_timestamp(combined_notes)
 
 # Read and print out all timestamps from the dictionaries in combined_notes
 for note in combined_notes:
-    print(f"Instrument: {note['instrument']}, Sample: {note['sample_location']}, Timestamp: {note['timestamp']} seconds, Duration: {note['duration']} seconds")
+    print(f"Instrument: {note['instrument']}, Sample: {note['sample_location']}, Timestamp: {note['timestamp']} seconds")
 
+# Function to play notes
+def play_notes():
+    global playing
+    playing = True
+    print("Press 'stop' to end playback.")
+    
+    while playing:  # Loop for continuous playback
+        for note in combined_notes:
+            if not playing:  # Check if playback should stop
+                break
+            play_obj = soundFile.play()
+            time.sleep(note['timestamp'])  # Use the timestamp from the note
+            time.sleep(0.001)  # Small delay to avoid overlapping plays
 
-# Store the start time
-time_zero = time.time()
+# Function to stop playback
+def stop_playback():
+    global playing
+    while True:
+        user_input = input()
+        if user_input.strip().lower() == 'stop':
+            playing = False
+            print("Playback stopped.")
+            break
 
-# iterate through time sequence and play sample
-while combined_notes:
-    now = time.time() - time_zero
-    ts = combined_notes[0]['timestamp']  # Check the timestamp of the next event
-    duration = combined_notes[0]['duration']  # Get the duration of the note
+# Start the playback in a separate thread
+playback_thread = threading.Thread(target=play_notes)
+playback_thread.start()
 
-    # check if we passed the next timestamp,
-    # if so, play sample and fetch new timestamp
-    if now >= ts:
-        play_obj = soundFile.play()  # Play the sound asynchronously
-        time.sleep(duration)  # Sleep for the duration of the note to simulate length
-       
-        combined_notes.pop(0)  # Only pop after playing the sound and its duration
+# Start the input thread to listen for the stop command
+stop_playback()
 
-    time.sleep(0.001)  # Sleep to avoid busy waiting
+# Wait for playback thread to finish before exiting
+playback_thread.join()

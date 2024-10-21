@@ -1,0 +1,16 @@
+generieke stappen
+1. genereer een lijst 'origineel' van 0 tot n 
+2. modulo elke waarde van die lijst tot x
+3. maak twee lijsten van dezelfde lengte met 1tjes en 2tjes
+4. multipliceer die lijsten tegen het origneel
+5. waardoor je twee vergelijkbare lijsten krijgt, maar niet helemaal.
+
+voordelen
+1. begrijpare lijsten
+2. flexibel, mogelijk tot uitbreiding
+
+nadelen
+1. tegenstrijdijg, het werkt pas interessant als er een verschil te merken tussen de twee zijdes.
+2. het heeft nog een element van willekeur, waar we van af willen.
+
+
