@@ -1,6 +1,3 @@
-add_subdirectory(JuceTest)
-add_subdirectory(03_soundingSine)
-add_subdirectory(Instrument_class)
 add_subdirectory(01_override)
 add_subdirectory(02_override_callFromBase)
 add_subdirectory(03_sineSquareSaw)
