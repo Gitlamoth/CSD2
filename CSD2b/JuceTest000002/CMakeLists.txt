@@ -1,9 +1,9 @@
-project(JuceTest VERSION 0.0.1)
-juce_add_console_app(JuceTest PRODUCT_NAME "JuceTest")
-target_sources(JuceTest PRIVATE main.cpp)
-target_compile_definitions(JuceTest PRIVATE JUCE_WEB_BROWSER=0 JUCE_USE_CURL=0)
+project(JuceTest002 VERSION 0.0.1)
+juce_add_console_app(JuceTest002 PRODUCT_NAME "JuceTest002")
+target_sources(JuceTest002 PRIVATE main.cpp)
+target_compile_definitions(JuceTest002 PRIVATE JUCE_WEB_BROWSER=0 JUCE_USE_CURL=0)
 
-target_link_libraries(JuceTest
+target_link_libraries(JuceTest002
         PRIVATE
         juce::juce_audio_basics
         juce::juce_audio_devices
@@ -15,4 +15,4 @@ target_link_libraries(JuceTest
         juce::juce_recommended_warning_flags
 )
 
-target_compile_features(JuceTest PRIVATE cxx_std_20)
+target_compile_features(JuceTest002 PRIVATE cxx_std_20)

@@ -1,0 +1,13 @@
+C:/Users/braml/Documents/CSD2/build/CMakeFiles/INSTALL.dir
+C:/Users/braml/Documents/CSD2/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/braml/Documents/CSD2/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/braml/Documents/CSD2/build/JUCE/CMakeFiles/INSTALL.dir
+C:/Users/braml/Documents/CSD2/build/JUCE/CMakeFiles/ALL_BUILD.dir
+C:/Users/braml/Documents/CSD2/build/JUCE/modules/CMakeFiles/INSTALL.dir
+C:/Users/braml/Documents/CSD2/build/JUCE/extras/Build/CMakeFiles/INSTALL.dir
+C:/Users/braml/Documents/CSD2/build/JUCE/extras/Build/juceaide/CMakeFiles/INSTALL.dir
+C:/Users/braml/Documents/CSD2/build/CSD2b/CMakeFiles/INSTALL.dir
+C:/Users/braml/Documents/CSD2/build/CSD2b/JuceTest/CMakeFiles/JuceTest.dir
+C:/Users/braml/Documents/CSD2/build/CSD2b/JuceTest/CMakeFiles/JuceTest_rc_lib.dir
+C:/Users/braml/Documents/CSD2/build/CSD2b/JuceTest/CMakeFiles/INSTALL.dir
+C:/Users/braml/Documents/CSD2/build/CSD2b/JuceTest/CMakeFiles/ALL_BUILD.dir

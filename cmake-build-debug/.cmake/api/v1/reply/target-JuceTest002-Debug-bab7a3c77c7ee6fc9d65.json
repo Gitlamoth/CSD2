@@ -1,0 +1,618 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "CSD2b/JuceTest000002/JuceTest002_artefacts/Debug/JuceTest002.exe"
+		},
+		{
+			"path" : "CSD2b/JuceTest000002/JuceTest002_artefacts/Debug/JuceTest002.pdb"
+		}
+	],
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"juce_add_console_app",
+			"target_link_libraries",
+			"_juce_add_resources_rc",
+			"target_compile_definitions",
+			"target_include_directories",
+			"_juce_initialise_target",
+			"target_compile_features",
+			"target_sources"
+		],
+		"files" : 
+		[
+			"JUCE/extras/Build/CMake/JUCEUtils.cmake",
+			"CSD2b/JuceTest000002/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 2,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 2138,
+				"parent" : 1
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 2165,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 841,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 6,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 2139,
+				"parent" : 1
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 4,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 2142,
+				"parent" : 1
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 2160,
+				"parent" : 1
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 2108,
+				"parent" : 9
+			},
+			{
+				"command" : 7,
+				"file" : 1,
+				"line" : 18,
+				"parent" : 0
+			},
+			{
+				"command" : 8,
+				"file" : 1,
+				"line" : 3,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "/DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++20 -MDd"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "/bigobj"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "/Od"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "/Zi"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "/MP"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "/EHsc"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "/W4"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 5,
+					"define" : "DEBUG=1"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "JUCE_MODULE_AVAILABLE_juce_audio_basics=1"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "JUCE_MODULE_AVAILABLE_juce_audio_devices=1"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "JUCE_MODULE_AVAILABLE_juce_audio_formats=1"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "JUCE_MODULE_AVAILABLE_juce_audio_processors=1"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "JUCE_MODULE_AVAILABLE_juce_core=1"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "JUCE_MODULE_AVAILABLE_juce_data_structures=1"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "JUCE_MODULE_AVAILABLE_juce_events=1"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "JUCE_MODULE_AVAILABLE_juce_graphics=1"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "JUCE_MODULE_AVAILABLE_juce_gui_basics=1"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "JUCE_MODULE_AVAILABLE_juce_gui_extra=1"
+				},
+				{
+					"backtrace" : 6,
+					"define" : "JUCE_STANDALONE_APPLICATION=1"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "JUCE_USE_CURL=0"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "JUCE_WEB_BROWSER=0"
+				},
+				{
+					"backtrace" : 8,
+					"define" : "_CONSOLE=1"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "_DEBUG=1"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 10,
+					"path" : "C:/Users/braml/Documents/CSD2/cmake-build-debug/CSD2b/JuceTest000002/JuceTest002_artefacts/JuceLibraryCode"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "C:/Users/braml/Documents/CSD2/JUCE/modules"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "C:/Users/braml/Documents/CSD2/JUCE/modules/juce_audio_processors/format_types/VST3_SDK"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "C:/Users/braml/Documents/CSD2/JUCE/modules/juce_audio_processors/format_types/LV2_SDK"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "C:/Users/braml/Documents/CSD2/JUCE/modules/juce_audio_processors/format_types/LV2_SDK/lv2"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "C:/Users/braml/Documents/CSD2/JUCE/modules/juce_audio_processors/format_types/LV2_SDK/serd"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "C:/Users/braml/Documents/CSD2/JUCE/modules/juce_audio_processors/format_types/LV2_SDK/sord"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "C:/Users/braml/Documents/CSD2/JUCE/modules/juce_audio_processors/format_types/LV2_SDK/sord/src"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "C:/Users/braml/Documents/CSD2/JUCE/modules/juce_audio_processors/format_types/LV2_SDK/sratom"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "C:/Users/braml/Documents/CSD2/JUCE/modules/juce_audio_processors/format_types/LV2_SDK/lilv"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "C:/Users/braml/Documents/CSD2/JUCE/modules/juce_audio_processors/format_types/LV2_SDK/lilv/src"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					11,
+					5
+				],
+				"standard" : "20"
+			},
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				15
+			]
+		},
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "/DWIN32 /D_WINDOWS /Zi /Ob0 /Od /RTC1 -MDd"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "/bigobj"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "/Od"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "/Zi"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "/MP"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "/EHsc"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "/W4"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 5,
+					"define" : "DEBUG=1"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "JUCE_MODULE_AVAILABLE_juce_audio_basics=1"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "JUCE_MODULE_AVAILABLE_juce_audio_devices=1"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "JUCE_MODULE_AVAILABLE_juce_audio_formats=1"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "JUCE_MODULE_AVAILABLE_juce_audio_processors=1"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "JUCE_MODULE_AVAILABLE_juce_core=1"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "JUCE_MODULE_AVAILABLE_juce_data_structures=1"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "JUCE_MODULE_AVAILABLE_juce_events=1"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "JUCE_MODULE_AVAILABLE_juce_graphics=1"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "JUCE_MODULE_AVAILABLE_juce_gui_basics=1"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "JUCE_MODULE_AVAILABLE_juce_gui_extra=1"
+				},
+				{
+					"backtrace" : 6,
+					"define" : "JUCE_STANDALONE_APPLICATION=1"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "JUCE_USE_CURL=0"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "JUCE_WEB_BROWSER=0"
+				},
+				{
+					"backtrace" : 8,
+					"define" : "_CONSOLE=1"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "_DEBUG=1"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 10,
+					"path" : "C:/Users/braml/Documents/CSD2/cmake-build-debug/CSD2b/JuceTest000002/JuceTest002_artefacts/JuceLibraryCode"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "C:/Users/braml/Documents/CSD2/JUCE/modules"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "C:/Users/braml/Documents/CSD2/JUCE/modules/juce_audio_processors/format_types/VST3_SDK"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "C:/Users/braml/Documents/CSD2/JUCE/modules/juce_audio_processors/format_types/LV2_SDK"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "C:/Users/braml/Documents/CSD2/JUCE/modules/juce_audio_processors/format_types/LV2_SDK/lv2"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "C:/Users/braml/Documents/CSD2/JUCE/modules/juce_audio_processors/format_types/LV2_SDK/serd"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "C:/Users/braml/Documents/CSD2/JUCE/modules/juce_audio_processors/format_types/LV2_SDK/sord"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "C:/Users/braml/Documents/CSD2/JUCE/modules/juce_audio_processors/format_types/LV2_SDK/sord/src"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "C:/Users/braml/Documents/CSD2/JUCE/modules/juce_audio_processors/format_types/LV2_SDK/sratom"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "C:/Users/braml/Documents/CSD2/JUCE/modules/juce_audio_processors/format_types/LV2_SDK/lilv"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "C:/Users/braml/Documents/CSD2/JUCE/modules/juce_audio_processors/format_types/LV2_SDK/lilv/src"
+				}
+			],
+			"language" : "C",
+			"sourceIndexes" : 
+			[
+				14
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "JuceTest002_rc_lib::@a445b2ce95c8654ef510"
+		}
+	],
+	"id" : "JuceTest002::@a445b2ce95c8654ef510",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "/DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "/machine:x64 /debug /INCREMENTAL /subsystem:console",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "JuceTest002",
+	"nameOnDisk" : "JuceTest002.exe",
+	"paths" : 
+	{
+		"build" : "CSD2b/JuceTest000002",
+		"source" : "CSD2b/JuceTest000002"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15
+			]
+		},
+		{
+			"name" : "Object Libraries",
+			"sourceIndexes" : 
+			[
+				16
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 12,
+			"compileGroupIndex" : 0,
+			"path" : "CSD2b/JuceTest000002/main.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 0,
+			"path" : "JUCE/modules/juce_audio_basics/juce_audio_basics.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 0,
+			"path" : "JUCE/modules/juce_core/juce_core.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 0,
+			"path" : "JUCE/modules/juce_core/juce_core_CompilationTime.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 0,
+			"path" : "JUCE/modules/juce_audio_devices/juce_audio_devices.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 0,
+			"path" : "JUCE/modules/juce_events/juce_events.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 0,
+			"path" : "JUCE/modules/juce_audio_formats/juce_audio_formats.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 0,
+			"path" : "JUCE/modules/juce_audio_processors/juce_audio_processors.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 0,
+			"path" : "JUCE/modules/juce_audio_processors/juce_audio_processors_ara.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 0,
+			"path" : "JUCE/modules/juce_audio_processors/juce_audio_processors_lv2_libs.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 0,
+			"path" : "JUCE/modules/juce_gui_extra/juce_gui_extra.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 0,
+			"path" : "JUCE/modules/juce_gui_basics/juce_gui_basics.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 0,
+			"path" : "JUCE/modules/juce_graphics/juce_graphics.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 0,
+			"path" : "JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 1,
+			"path" : "JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 0,
+			"path" : "JUCE/modules/juce_data_structures/juce_data_structures.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/CSD2b/JuceTest000002/CMakeFiles/JuceTest002_rc_lib.dir/JuceTest002_artefacts/JuceLibraryCode/JuceTest002_resources.rc.res",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "EXECUTABLE"
+}

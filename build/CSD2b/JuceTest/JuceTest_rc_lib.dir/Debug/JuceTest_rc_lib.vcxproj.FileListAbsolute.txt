@@ -1,0 +1,1 @@
+C:\Users\braml\Documents\CSD2\build\CSD2b\JuceTest\JuceTest_rc_lib.dir\Debug\JuceTest_rc_lib.lib

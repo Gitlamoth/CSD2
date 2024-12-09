@@ -1,0 +1,104 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "CSD2b/JuceTest/CMakeFiles/JuceTest_rc_lib.dir/./JuceTest_artefacts/JuceLibraryCode/JuceTest_resources.rc.res"
+		}
+	],
+	"backtrace" : 3,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"_juce_add_resources_rc",
+			"juce_add_console_app"
+		],
+		"files" : 
+		[
+			"JUCE/extras/Build/CMake/JUCEUtils.cmake",
+			"CSD2b/JuceTest/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 2,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 2165,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 828,
+				"parent" : 2
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-DWIN32 -D_DEBUG"
+				}
+			],
+			"language" : "RC",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"id" : "JuceTest_rc_lib::@449fe753856872f3acac",
+	"name" : "JuceTest_rc_lib",
+	"paths" : 
+	{
+		"build" : "CSD2b/JuceTest",
+		"source" : "CSD2b/JuceTest"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/CSD2b/JuceTest/JuceTest_artefacts/JuceLibraryCode/JuceTest_resources.rc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/CSD2b/JuceTest/JuceTest_artefacts/JuceLibraryCode/JuceTest_resources.rc.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "OBJECT_LIBRARY"
+}

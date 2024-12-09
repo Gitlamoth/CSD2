@@ -1,0 +1,10 @@
+^C:\USERS\BRAML\DOCUMENTS\CSD2\CSD2B\JUCETEST\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/braml/Documents/CSD2 -BC:/Users/braml/Documents/CSD2/build --check-stamp-file C:/Users/braml/Documents/CSD2/build/CSD2b/JuceTest/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

@@ -1,0 +1,309 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						5
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "JUCE",
+					"childIndexes" : 
+					[
+						2,
+						3
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-JUCE-Debug-4828d1fb94727b98e7c3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "JUCE"
+				},
+				{
+					"build" : "JUCE/modules",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-JUCE.modules-Debug-920b8ae8abdfa3fb054e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "JUCE/modules"
+				},
+				{
+					"build" : "JUCE/extras/Build",
+					"childIndexes" : 
+					[
+						4
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-JUCE.extras.Build-Debug-3b65d93d5d984d19e246.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "JUCE/extras/Build"
+				},
+				{
+					"build" : "JUCE/extras/Build/juceaide",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-JUCE.extras.Build.juceaide-Debug-b9c3836fb404dc602735.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 1,
+					"source" : "JUCE/extras/Build/juceaide"
+				},
+				{
+					"build" : "CSD2b",
+					"childIndexes" : 
+					[
+						6,
+						7,
+						8,
+						9
+					],
+					"jsonFile" : "directory-CSD2b-Debug-35d9e2737bfbf64bb57a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "CSD2b"
+				},
+				{
+					"build" : "CSD2b/JuceTest",
+					"jsonFile" : "directory-CSD2b.JuceTest-Debug-e7176171d3e749c27d94.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 2,
+					"source" : "CSD2b/JuceTest",
+					"targetIndexes" : 
+					[
+						0,
+						3
+					]
+				},
+				{
+					"build" : "CSD2b/JuceTest000002",
+					"jsonFile" : "directory-CSD2b.JuceTest000002-Debug-0eaf13416e91fc56c905.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 3,
+					"source" : "CSD2b/JuceTest000002",
+					"targetIndexes" : 
+					[
+						1,
+						2
+					]
+				},
+				{
+					"build" : "CSD2b/03_soundingSine",
+					"jsonFile" : "directory-CSD2b.03_soundingSine-Debug-b963e60f707a9a75cec9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 4,
+					"source" : "CSD2b/03_soundingSine",
+					"targetIndexes" : 
+					[
+						4,
+						5
+					]
+				},
+				{
+					"build" : "CSD2b/Instrument_class",
+					"jsonFile" : "directory-CSD2b.Instrument_class-Debug-ff9bea191f1d39e52643.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 5,
+					"source" : "CSD2b/Instrument_class",
+					"targetIndexes" : 
+					[
+						6
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						5
+					],
+					"name" : "CSD"
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4
+					],
+					"name" : "JUCE",
+					"parentIndex" : 0
+				},
+				{
+					"directoryIndexes" : 
+					[
+						6
+					],
+					"name" : "JuceTest",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0,
+						3
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						7
+					],
+					"name" : "JuceTest002",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						2
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						8
+					],
+					"name" : "example",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						4,
+						5
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						9
+					],
+					"name" : "InstrumentClass",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						6
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 6,
+					"id" : "JuceTest::@449fe753856872f3acac",
+					"jsonFile" : "target-JuceTest-Debug-bbea991f0e4499627e69.json",
+					"name" : "JuceTest",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "JuceTest002::@a445b2ce95c8654ef510",
+					"jsonFile" : "target-JuceTest002-Debug-bab7a3c77c7ee6fc9d65.json",
+					"name" : "JuceTest002",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "JuceTest002_rc_lib::@a445b2ce95c8654ef510",
+					"jsonFile" : "target-JuceTest002_rc_lib-Debug-a7576e50d7ae4e830e4f.json",
+					"name" : "JuceTest002_rc_lib",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "JuceTest_rc_lib::@449fe753856872f3acac",
+					"jsonFile" : "target-JuceTest_rc_lib-Debug-8947a360ac4b97fece47.json",
+					"name" : "JuceTest_rc_lib",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "example::@f98cfbf80618683a6e92",
+					"jsonFile" : "target-example-Debug-09d7d1880338e9e7d0ef.json",
+					"name" : "example",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "example_rc_lib::@f98cfbf80618683a6e92",
+					"jsonFile" : "target-example_rc_lib-Debug-68a6a7ed4392660f4142.json",
+					"name" : "example_rc_lib",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "instrumentclassexample::@1c20b53d47b180d8419f",
+					"jsonFile" : "target-instrumentclassexample-Debug-9ced25bb6de29f2e3396.json",
+					"name" : "instrumentclassexample",
+					"projectIndex" : 5
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/braml/Documents/CSD2/cmake-build-debug",
+		"source" : "C:/Users/braml/Documents/CSD2"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

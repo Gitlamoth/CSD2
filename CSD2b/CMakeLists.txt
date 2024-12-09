@@ -1,0 +1,4 @@
+add_subdirectory(JuceTest)
+add_subdirectory(JuceTest000002)
+add_subdirectory(03_soundingSine)
+add_subdirectory(Instrument_class)
